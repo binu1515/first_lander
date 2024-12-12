@@ -1,0 +1,93 @@
+<html>
+<head>
+  <style>
+    body {
+      font-family: 'Crimson Text', serif;
+      margin: 0;
+      padding: 0;
+      background-color: #fdf6e3; /* Set background color */
+      color: #333;
+    }
+
+    .hero {
+      position: relative;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+
+
+    /* Apply the background image using a pseudo-element */
+    .hero::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-image: url('images/back.png'); /* Background image */
+      background-size: cover;
+      background-position: center;
+      opacity: 0.1; /* Set opacity of the background image */
+      z-index: -1; /* Ensure the image is behind the content */
+    }
+
+    .hero-text {
+      padding: 20px;
+      border-radius: 10px;
+      color: #ff6347;
+      position: relative;
+      z-index: 1; /* Ensure the text is in the foreground */
+      display: flex;       /* Added: Use flexbox for consistent spacing*/
+      flex-direction: column;  /* Added: Stack items vertically */
+      gap: 15px;   /* Added: Create consistent spacing between all elements */
+    }
+
+    .hero-text h1 {
+      font-size: 24px;
+      margin: 0;    /* Instead of margin-top 30px */
+    }
+     .logo {
+       width: 196.25px;
+       height: 49px;
+       margin-bottom: 0.001px; /* Added spacing after the logo image */
+    }
+
+    .hero-text p.main-text {
+      font-size: 24px; /* Set the font size to 30px */
+      font-family: 'Lora', serif; /* Apply the Lora font */
+      font-weight: normal; /* Regular weight */
+      letter-spacing: -1px; /* Apply letter spacing of -1px */
+      color: #353535; /* Set the font color to #353535 with 100% opacity */
+      text-shadow: 3px 3px 3px rgba(28, 28, 28, 0.05); /* Apply drop shadow with blur and color at 5% opacity */
+      margin: 0;   /* Reset margin to use gap instead */
+    }
+
+    .hero-text p.quote {
+      font-size: 14px; /* Set the font size to 20px */
+      font-family: 'Inter', sans-serif; /* Apply the Inter font */
+      font-weight: 300; /* Set the font weight to 300 */
+      letter-spacing: -1px; /* Apply letter spacing of -1px */
+      color: #d14c3a; /* Set the font color to #d14c3a with 100% opacity */
+      text-shadow: 3px 3px 3px rgba(28, 28, 28, 0.05); /* Apply drop shadow with blur and color at 5% opacity */
+      margin: 0;    /* Reset margin to use gap instead */
+    }
+  </style>
+  <!-- Add link to Google Fonts for the Inter and Lora fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Lora&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="hero">
+    <div class="hero-text">
+      <h1>
+        <img src="images/icon_crop.png" alt="Wedding Photography" class="logo">
+      </h1>
+      <p class="main-text">Book the Best Wedding Photographers Quickly & Easily</p> <!-- Styled text with 'main-text' class -->
+      <p class="quote">"We are building a platform to make your wedding the best day of your life and will be launching soon."</p> <!-- Styled quote with 'quote' class -->
+    </div>
+  </div>
+</body>
+</html>
